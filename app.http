@@ -1,11 +1,15 @@
-###RECUPERAR TODAS LAS PELICULAS
-GET http://localhost:1234/movies
-###RECUPERAR PELICULA POR ID
-GET http://localhost:1234/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
-###RECUPERAR TODAS LAS EPLICULAS POR UN GÉNERO 
-GET http://localhost:1234/movies?genre=Sci-Fi
-###enviarr una nueva pelicula
-POST http://localhost:1234/movies
+###RECUPERAR TODOS LOS RESTAURANTES
+GET http://localhost:3000/restaurants
+###MOSTRAR TODOS LOS RESTAURANTES
+GET http://localhost:3000/restaurants.html
+###FILTRAR RESTAURANTES POR ID
+GET http://localhost:3000/restaurants/2
+###MOSTRAR MASSAGES
+GET http://localhost:3000/massages
+###RECUPERAR TODAS LAS IMAGENES DL RESTAURANTE SELECCIONADO
+GET http://localhost:3000/restaurants/1/images
+###enviar una nueva pelicula
+POST http://localhost:3000/movies
 Content-Type: application/json
 
   {
@@ -22,7 +26,7 @@ Content-Type: application/json
     "rate": 10
   }
 ###enviarr una nueva pelicula
-POST http://localhost:1234/movies
+POST http://localhost:3000/movies
 Content-Type: application/json
 
   {
@@ -40,7 +44,7 @@ Content-Type: application/json
   }
 
 ###EDITAR PELICULA POR ID
-PATCH  http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+PATCH  http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 Content-Type: application/json
 
 {

@@ -1,0 +1,75 @@
+[
+    {
+      "name": "Ilios",
+      "restaurant_id": "1",
+      "stars": 3,
+      "location": "Av. Costera 123, Playa Azul",
+      "schedules": {
+        "Monday-Friday": "12:00 PM - 10:00 PM",
+        "Saturday-Sunday": "1:00 PM - 11:00 PM"
+      },
+      "type_of_food": ["Mariscos", "Pescado", "Comida Mexicana"],
+      "category": "Casual Dining",
+      "service_id": 101,
+      "description": "Restaurante de mariscos y pescados frescos con un toque de comida mexicana."
+    },
+    {
+      "name": "Taboo",
+      "restaurant_id": "2",
+      "stars": 5,
+      "location": "Calle Roma 456, Centro",
+      "schedules": {
+        "Monday-Saturday": "11:00 AM - 11:00 PM",
+        "Sunday": "Closed"
+      },
+      "type_of_food": ["Italiana", "Pasta", "Pizza"],
+      "category": "Fine Dining",
+      "service_id": 102,
+      "description": "Restaurante de comida italiana con un toque de pasta y pizza."
+    },
+    {
+      "name": "Green Garden",
+      "restaurant_id": "3",
+      "stars": 3,
+      "location": "Av. Verde 789, EcoParque",
+      "schedules": {
+        "Monday-Friday": "9:00 AM - 9:00 PM",
+        "Saturday": "10:00 AM - 8:00 PM",
+        "Sunday": "Closed"
+      },
+      "type_of_food": ["Vegana", "Orgánica", "Saludable"],
+      "category": "Café",
+      "service_id": 103,
+      "description": "Restaurante de comida vegana y orgánica con un toque de saludable."
+    },
+    {
+      "name": "Rosa Negra",
+      "restaurant_id": "4",
+      "stars": 4.5,
+      "location": "Av. Verde 789, EcoParque",
+      "schedules": {
+        "Monday-Friday": "9:00 AM - 9:00 PM",
+        "Saturday": "10:00 AM - 8:00 PM",
+        "Sunday": "Closed"
+      },
+      "type_of_food": ["Carne", "Asados", "Mexicana"],
+      "category": "Café",
+      "service_id": 103,
+      "description": "Restaurante de comida de carne y asados con un toque de comida mexicana."
+    },
+    {
+      "name": "Bagatelle",
+      "restaurant_id": "5",
+      "stars": 4,
+      "location": "Av. Verde 789, EcoParque",
+      "schedules": {
+        "Monday-Friday": "9:00 AM - 9:00 PM",
+        "Saturday": "10:00 AM - 8:00 PM",
+        "Sunday": "Closed"
+      },
+      "type_of_food": ["Snacks", "italiana", "Saludable"],
+      "category": "Café",
+      "service_id": 103,
+      "description": "Restaurante de comida de snacks y comida italiana con un toque de saludable."
+    }
+  ]

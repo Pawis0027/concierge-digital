@@ -3,13 +3,13 @@ body{
     --color-primario: #8DA288;
     --color-secundario: #475045;
     --color-texto-primario: #2A2F29;
-    --color-texto-secundario: #DFE4DD; 
-    --color-terciario--beige: #C0BBA7;
+    --color-white: #fff; 
+    --color--beige: #C0BBA7;
     --color-contraste-1: #ffff;
     --color-contraste-2: #000000;
     --gris-oscuro: rgb(40, 37, 37);
     --gris-claro:#9c9c9c;
-    background-color: var(--color-contraste-2);
+    background-color: var(--color--beige);
     box-sizing: border-box;
     max-height: 180vh;
 }
@@ -40,6 +40,7 @@ body::-webkit-scrollbar{
     text-align: center;
     font-size: clamp(40px, 9vw, 80px);
     z-index: 10;
+
     color: var(--color-contraste-1);
 }
 .filtros{
@@ -48,7 +49,7 @@ body::-webkit-scrollbar{
     z-index: 30;
     display: flex;
     justify-content: end;
-    background-color: var(--color-terciario--beige);
+    background-color: var(--color-beige);
     padding: 12px;
 }
 .filtros .container{
@@ -57,7 +58,7 @@ body::-webkit-scrollbar{
     justify-content: end;
 }
 .filtros .cont-select{
-    background-color: #ffffff;
+    background-color: var(--color-white);
     padding: 0 8px 0 0;
     margin: 0 8px;
     border: none;
@@ -80,11 +81,12 @@ body::-webkit-scrollbar{
     margin-top: 16px;
 }
 .filtros .interactivo{
-    background-color: var(--color-texto-primario);
+    border: var(--color-white) solid 1px;
+    background-color: var(--color-beige);
 }
 .filtros .interactivo select{
-    background-color: var(--color-texto-primario);
-    color: #DFE4DD;
+    background-color: var(--color--beige);
+    color: #000;
 }
 
 
@@ -101,7 +103,7 @@ body::-webkit-scrollbar{
 }
 .restaurantes img.principal{
     position: absolute;
-    filter:brightness(.8) opacity(.8);
+    filter: brightness(.75) ;
 
     animation-name: acomodarInfo-iprin;
     animation-fill-mode: both;
@@ -109,7 +111,7 @@ body::-webkit-scrollbar{
     animation-timeline: --restaurante ;
 }
 .restaurantes h2{
-    color: var(--color-contraste-1);
+    color: var(--color-white);
     font-size: clamp(35px, 7vw, 80px);
     position: absolute;
     margin: 6vw;
@@ -120,7 +122,7 @@ body::-webkit-scrollbar{
     position: absolute;
     width: 100%;
     bottom: 0;
-    margin-bottom: 30px;
+    margin-bottom: 5vw;
     max-height: 30%;
     padding: 0 8px;
 }
@@ -131,7 +133,7 @@ body::-webkit-scrollbar{
     max-height: 100%;
     overflow-y: scroll;
     margin: 0 8px 0 0;
-    color: var(--color-contraste-1);
+    color: var(--color-white);
     background-color: #5252527d;
     font-size: clamp(15px, 4vw, 35px);
 
@@ -146,7 +148,7 @@ body::-webkit-scrollbar{
 }
 .restaurantes .informacion p a{
     text-decoration: none;
-    color: var(--color-contraste-1);
+    color: var(--color-white);
 }
 .restaurantes .informacion .contenedor-imgs{
     display: flex;
@@ -165,7 +167,7 @@ body::-webkit-scrollbar{
 }
 .restaurantes .informacion .contenedor-imgs div{
     margin: 0 2.5%;
-    border: 1px var(--color-contraste-1) solid;
+    border: 1px var(--color-white) solid;
     min-width: 45%;
     max-width: 45%;
     z-index: 10;
@@ -182,9 +184,9 @@ body::-webkit-scrollbar{
     display: flex;
     justify-content: end;
     box-sizing: border-box;
-    padding: 8px;
+    padding: 1vw;
     width: 50%;
-    height: 30px;
+    /* height: 30px; */
     position: absolute;
     bottom: 0;
     right: 0;
@@ -193,25 +195,25 @@ body::-webkit-scrollbar{
     margin-right: 12px;
 }
 .restaurantes .info-extra .precio p{
-    font-size: 17px;
+    font-size: 2.8vw;
     margin: 0;
-    color: var(--color-contraste-1);
+    color: var(--color-white);
 
 }
 .restaurantes .info-extra .div-est{
     display: flex;
 }
 .restaurantes .info-extra .div-est .estrella{
-    width: 17px;
-    height: 17px;
-    background-color: var(--color-contraste-1);
+    width: 3vw;
+    height: 3vw;
+    background-color: var(--color-white);
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 .restaurantes .info-extra .div-est .media-estrella{
-    width: 17px;
-    height: 17px;
-    background: var(--color-contraste-1);
-    background: linear-gradient(90deg, var(--color-contraste-1) 0%, var(--color-contraste-1) 49%, rgba(217, 217, 217, 0.539) 50%);
+    width: 3vw;
+    height: 3vw;
+    background: var(--color-white);
+    background: linear-gradient(90deg, var(--color-white) 0%, var(--color-white) 49%, rgba(217, 217, 217, 0.539) 50%);
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
@@ -224,7 +226,7 @@ body::-webkit-scrollbar{
         top: 10vw;
         left: 15vw;
     }
-    70%{
+    60%{
         width: 100%;
         height: 100%;
         top: 0;
@@ -247,7 +249,7 @@ body::-webkit-scrollbar{
         background-color: #52525200;
         border: 1px #ffffff17 solid;
     }
-    70%{
+    60%{
         transform: translateY(0px);
         background-color: #5252527d;
         border: 1px #ffffffbe solid;
@@ -262,7 +264,7 @@ body::-webkit-scrollbar{
     0%{
         transform: translate(80%) scale(1.7);
     }
-    70%{
+    60%{
         transform: translate(0) scale(1);
     }
     100%{

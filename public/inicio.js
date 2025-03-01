@@ -1,11 +1,11 @@
 // ----------------------------declaracion de variables
-let promociones = document.querySelectorAll(".contenedor-promocion");
-let iSig = document.querySelector(".section-imagen-principal .sig");
-let iPrev = document.querySelector(".section-imagen-principal .prev");
-let numPromoActual = 0;
+let promociones = document.querySelectorAll(".contenedor-promocion")
+let iSig = document.querySelector(".section-imagen-principal .sig")
+let iPrev = document.querySelector(".section-imagen-principal .prev")
+let numPromoActual = 0
 contenedorScrollPromociones = document.querySelector(".contenedor-scroll-promociones");
 let contenedorAuxiliarPromo = document.querySelectorAll(".contenedor-scroll-promociones .contenedor-auxiliar");
-let contenedorAuxiliarPromoSeleccionado;
+let contenedorAuxiliarPromoSeleccionado
 // ---------------------------crearPromociones
 
 // ----------------------------crear contenedores para promo principal
