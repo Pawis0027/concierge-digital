@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restarantes</title>
+    <link rel="stylesheet" href="restaurantes.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="titulo">
+            <img src="imagenes/ilios.jpg" alt="Restaurantes">
+            <h1>Restaurants</h1>
+        </section>
+        <section class="filtros">
+            <div class="container">
+            <div class="cont-select xdefecto">
+                <select id="filtrarpor">
+                    <option selected="true" disabled="disabled" style="display: none;">Filter by...</option>
+                    <option value="todo">Show all</option>
+                    <option value="precio">Price</option>
+                    <option value="tdc">Type of food</option>
+                    <option value="calificacion">Score</option>
+                </select>
+            </div>
+
+            <div class="cont-select interactivo" style="display: none;">
+                <select id="filtrando">
+                    <option value="todo">Show all</option>
+                    <option selected="true">Less to more </option>
+                </select>
+            </div>   
+            </div>             
+        </section>
+        <section class="opciones"></section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="restaurantes.js"></script>
+</html>

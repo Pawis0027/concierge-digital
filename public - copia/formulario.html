@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="formulario.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="formulario-pag">
+    <div class="div-titulo-general">
+        <div class="borde">
+            <div class="div-titulo-principal">
+                <h2>Ingresa tus datos</h2>
+            </div>   
+        </div>
+        
+    </div>
+    <div class="formulario">
+        <form action="" method="post">
+            <div class="cont-preguntas">
+                <div class="contenedor-dato">
+                    <label for="nombre">Nombre</label>
+                    <input required type="text" name="nombre" autocomplete="given-name" placeholder="Introduce tu nombre" id="nombre">
+                </div>
+                <div class="contenedor-dato">
+                    <label for="apellido">Apellidos</label>
+                    <input type="text" name="apellido" autocomplete="additional-name" id="apellido" placeholder="Introduce tus apellidos">
+                </div>
+                <div class="contenedor-dato">
+                    <label for="servicio">Servicio</label>
+                    <select name="servicio" id="servicio">
+                        <option value="restaurante">Restaurante</option>
+                        <option value="masaje">Masaje</option>
+                        <option value="actividad">Actividad</option>
+                    </select>
+                </div>
+                <div class="contenedor-dato comentarios">
+                    <label for="comentario">Comentarios</label>
+                    <textarea name="comentario" rows="1" placeholder="Soy Alergico al aguacate" id="comentario"></textarea>
+                </div>
+                <div class="contenedor-dato fecha">
+                    <label for="fecha">Fecha</label>
+                    <input required type="datetime-local" name="fecha" placeholder="Introduce la fecha de tu visita" id="fecha">
+                </div>
+            </div>    
+            <div class="reservar">
+                    <a href="contactar.html"><input type="submit" value="Reservar"></a>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+<script src="formulario.js"></script>
+</html>

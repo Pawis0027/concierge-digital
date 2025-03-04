@@ -1,0 +1,273 @@
+body{
+    margin: 0;
+    --color-primario: #8DA288;
+    --color-secundario: #475045;
+    --color-texto-primario: #2A2F29;
+    --color-white: #fff; 
+    --color--beige: #C0BBA7;
+    --color-contraste-1: #ffff;
+    --color-contraste-2: #000000;
+    --gris-oscuro: rgb(40, 37, 37);
+    --gris-claro:#9c9c9c;
+    background-color: var(--color--beige);
+    box-sizing: border-box;
+    max-height: 180vh;
+}
+body::-webkit-scrollbar{
+    width: 1px;
+    display: none;
+}
+
+.titulo{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 10/5.5;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+.titulo img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    filter:drop-shadow(0 0 0.75rem #000) opacity(1) brightness(.6);
+}
+.titulo h1{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    font-size: clamp(40px, 9vw, 80px);
+    z-index: 10;
+
+    color: var(--color-contraste-1);
+}
+.filtros{
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: flex;
+    justify-content: end;
+    background-color: var(--color-beige);
+    padding: 12px;
+}
+.filtros .container{
+    width: 75%;
+    display: flex;
+    justify-content: end;
+}
+.filtros .cont-select{
+    background-color: var(--color-white);
+    padding: 0 8px 0 0;
+    margin: 0 8px;
+    border: none;
+    border-radius: 30px;
+    width: 50%;
+    max-width: 250px;
+}
+.filtros .cont-select select{
+    border: none;
+    border-radius: 30px;
+    padding: 4px 8px;
+    font-size: clamp(10px, 3vw, 30px);
+    width: 100%;
+}
+.filtros .cont-select select:focus{
+    outline: 0;
+    box-shadow: none;
+}
+.filtros .cont-select select option{
+    margin-top: 16px;
+}
+.filtros .interactivo{
+    border: var(--color-white) solid 1px;
+    background-color: var(--color-beige);
+}
+.filtros .interactivo select{
+    background-color: var(--color--beige);
+    color: #000;
+}
+
+
+
+.restaurantes{
+    width: 100%;
+    position: relative;
+    aspect-ratio: 3/2;
+    box-sizing: border-box;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+    view-timeline: --restaurante block;
+}
+.restaurantes img.principal{
+    position: absolute;
+    filter: brightness(.75) ;
+
+    animation-name: acomodarInfo-iprin;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-timeline: --restaurante ;
+}
+.restaurantes h2{
+    color: var(--color-white);
+    font-size: clamp(35px, 7vw, 80px);
+    position: absolute;
+    margin: 6vw;
+}
+.restaurantes .informacion{
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin-bottom: 5vw;
+    max-height: 30%;
+    padding: 0 8px;
+}
+.restaurantes .informacion p{
+    padding: 8px;
+    min-width: 50%;
+    max-width: 50%;
+    max-height: 100%;
+    overflow-y: scroll;
+    margin: 0 8px 0 0;
+    color: var(--color-white);
+    background-color: #5252527d;
+    font-size: clamp(15px, 4vw, 35px);
+
+    animation-name: acomodarInfo-p;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-timeline: --restaurante;
+}
+.restaurantes .informacion p::-webkit-scrollbar{
+    width: 1px;
+    display: none;
+}
+.restaurantes .informacion p a{
+    text-decoration: none;
+    color: var(--color-white);
+}
+.restaurantes .informacion .contenedor-imgs{
+    display: flex;
+    width: 50%;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    animation-name: acomodarInfo-contImgs;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-timeline: --restaurante;
+}
+.restaurantes .informacion .contenedor-imgs::-webkit-scrollbar{
+    width: 1px;
+    display: none;
+}
+.restaurantes .informacion .contenedor-imgs div{
+    margin: 0 2.5%;
+    border: 1px var(--color-white) solid;
+    min-width: 45%;
+    max-width: 45%;
+    z-index: 10;
+}
+.restaurantes .informacion .contenedor-imgs div img{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    filter: brightness(.8) opacity(.9);
+}
+.restaurantes .info-extra{
+    display: flex;
+    justify-content: end;
+    box-sizing: border-box;
+    padding: 1vw;
+    width: 50%;
+    /* height: 30px; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.restaurantes .info-extra .precio{
+    margin-right: 12px;
+}
+.restaurantes .info-extra .precio p{
+    font-size: 2.8vw;
+    margin: 0;
+    color: var(--color-white);
+
+}
+.restaurantes .info-extra .div-est{
+    display: flex;
+}
+.restaurantes .info-extra .div-est .estrella{
+    width: 3vw;
+    height: 3vw;
+    background-color: var(--color-white);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.restaurantes .info-extra .div-est .media-estrella{
+    width: 3vw;
+    height: 3vw;
+    background: var(--color-white);
+    background: linear-gradient(90deg, var(--color-white) 0%, var(--color-white) 49%, rgba(217, 217, 217, 0.539) 50%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+
+
+@keyframes  acomodarInfo-iprin{
+    0%{
+        width: 70%;
+        height: 70%;
+        top: 10vw;
+        left: 15vw;
+    }
+    60%{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;        
+    }
+}
+@keyframes  acomodarInfo-p{
+    0%{
+        transform: translateY(60px);
+        background-color: #52525200;
+        border: 4px #ffffff00 solid;
+    }
+    45%{
+        background-color: #52525200;
+        border: 1px #ffffff17 solid;
+    }
+    60%{
+        transform: translateY(0px);
+        background-color: #5252527d;
+        border: 1px #ffffffbe solid;
+    }
+    100%{
+        transform: translateY(0px);
+        background-color: #5252527d;
+        border: 1px #fff solid;
+    }
+}
+@keyframes  acomodarInfo-contImgs{
+    0%{
+        transform: translate(80%) scale(1.7);
+    }
+    60%{
+        transform: translate(0) scale(1);
+    }
+    100%{
+        transform: translate(0) scale(1);
+    }
+}

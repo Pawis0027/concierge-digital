@@ -1,7 +1,12 @@
 import express from 'express'
 import { corsMiddleware } from './middleware/cors.js'
 import fs from 'fs'
-const restaurants = JSON.parse(fs.readFileSync('./restaurants.json'), 'utf-8')
+import { fileURLToPath } from 'url'
+import { dirname, join } from 'path'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const filePath = join(__dirname, 'restaurants.json')
+const restaurants = JSON.parse(fs.readFileSync(filePath), 'utf-8')
 // import { moviesRouter } from './routes/routes.js'
 const app = express()
 app.disable('x-powered-by')
@@ -16,13 +21,15 @@ app.get('/activities', (req, res) => {
   res.sendFile('inicio.html', { root: './public' })
 })
 app.get('/restaurants', (req, res) => {
-  res.header('Access-Control-Allow-Origin', '*')
-  console.log(req.params)
-  res.json(restaurants)
-})
-app.get('/restaurants.html', (req, res) => {
   res.sendFile('restaurantes.html', { root: './public' })
 })
+app.get('/restaurants/info', (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.json(restaurants)
+})
+// app.get('/restaurants.html', (req, res) => {
+//   res.sendFile('restaurantes.html', { root: './public' })
+// })
 app.get('/restaurants/:restaurant_id', (req, res) => {
   res.header('Access-Control-Allow-Origin', '*')
   const { restaurant_id } = req.params
@@ -32,7 +39,7 @@ app.get('/restaurants/:restaurant_id', (req, res) => {
   }
   res.status(404).json({ error: 'Restaurant not found' })
 })
-app.get('/restaurants/:id/images', (req, res) => {
+app.get('/images', (req, res) => {
   res.sendFile('imagenes.html', { root: './public' })
 })
 app.get('/chef', (req, res) => {
